@@ -15,7 +15,6 @@ h1 {
   text-align: center;
   text-decoration: underline;
   font-size: 2em;
-  /*Indents all heading 1 tags by 32px on each side*/
   padding-left: 32px;
   padding-right: 32px;
 }
@@ -23,9 +22,11 @@ h1 {
 h2 {
   font-family: cursive;
   font-size: 1.5em;
-  /*Indents all heading 2 tags by 32px on each side*/
   padding-left: 32px;
   padding-right: 32px;
+}
+h2:hover {
+  font-size: 1.6em;
 }
 
 h3 {
@@ -35,7 +36,6 @@ h3 {
 }
 
 p {
-  /*Indents all paragraph tags by 32px on each side*/
   padding-left: 32px;
   padding-right: 32px;
 }
@@ -64,55 +64,5 @@ img {
 }
 
 .subcat {
-  /*Indents specific heading 2 and paragraph tags by 64px on the left*/
   padding-left: 64px;
-}
-
-/* Container holding all your items */
-.text-select-container {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-/* 1. Force the row to handle the 32px spacing */
-.text-select-label {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  user-select: none; 
-}
-
-/* 2. Keep the machine checkbox hidden */
-.text-select-input {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-/* 3. Base styling for the raw text strings */
-.text-select-content {
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    transition: color 0.2s ease-in-out;
-}
-
-/* 4. Color shift when hovering your mouse over the text */
-.text-select-label:hover .text-select-content {
-    color: #808080; /* Darker gray/black to show it is interactive */
-}
-
-/* 5. THE ACTIVE SELECTION STATE */
-/* When checked, make the text turn blue */
-.text-select-input:checked + .text-select-content {
-    color: #00c0ff; /* Bright blue text color */
-    font-weight: 600; /* Optional: make it slightly bold when selected */
-}
-
-/* 6. Keyboard accessibility helper */
-.text-select-input:focus-visible + .text-select-content {
-    outline: 2px dashed #00c0ff;
-    outline-offset: 4px;
 }
